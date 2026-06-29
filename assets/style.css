@@ -1,0 +1,36 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --primary: #3b82f6;
+  --text: #1f2937;
+  --sidebar: #111827;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, system-ui, sans-serif; }
+body { background: var(--bg); color: var(--text); }
+
+/* Auth */
+.auth-container { display: grid; place-items: center; min-height: 100vh; padding: 20px; }
+.auth-card { background: var(--card); padding: 32px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); width: 100%; max-width: 400px; }
+.auth-card input,.auth-card button { width: 100%; padding: 12px; margin-top: 12px; border: 1px solid #e5e7eb; border-radius: 10px; }
+.auth-card button { background: var(--primary); color: #fff; border: none; cursor: pointer; }
+.auth-card a { font-size: 14px; display:block; margin-top:10px; color: var(--primary); text-decoration:none; }
+
+/* Dashboard */
+.dashboard { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+.sidebar { background: var(--sidebar); color: #fff; padding: 20px; }
+.sidebar h2 { margin-bottom: 16px; }
+.sidebar nav a { display: block; color: #d1d5db; padding: 10px; border-radius: 8px; text-decoration: none; margin-top: 4px; }
+.sidebar nav a:hover { background: #1f2937; }
+.topbar { display: flex; align-items: center; justify-content: space-between; background: var(--card); padding: 16px 24px; border-bottom: 1px solid #e5e7eb; }
+.topbar .search { padding:10px; border:1px solid #e5e7eb; border-radius:8px; }
+.topbar .right { display: flex; align-items: center; gap: 16px; }
+.content { padding: 24px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.card { background: var(--card); padding: 20px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.chart-placeholder { height: 240px; background: #eef2ff; border-radius: 12px; display: grid; place-items: center; color: #4f46e5; font-weight:600; }
+
+/* Mobile */
+@media (max-width: 900px) {
+ .dashboard { grid-template-columns: 1fr; }
+ .sidebar { display:none; } /* Simple mobile version for Day 1 */
+}
