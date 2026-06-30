@@ -3,54 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>SoftGrid CRM - Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="layout">
+  <div class="dashboard">
     <aside class="sidebar">
-      <div class="brand">CRM</div>
-      <nav class="nav">
-        <a href="dashboard.html" class="active">Dashboard</a>
-        <a href="#">Customers</a>
-        <a href="#">Leads</a>
-        <a href="#">Employees</a>
-        <a href="#">Tasks</a>
-        <a href="index.html">Logout</a>
+      <div class="logo">SoftGrid CRM</div>
+      <nav>
+        <a href="dashboard.html" class="active">Customer List</a>
+        <a href="add-customer.html">Add Customer</a>
+        <a href="customer-profile.html">Customer Profile</a>
+        <a href="leads.html">Lead Management</a>
+        <a href="add-lead.html">Add Lead</a>
       </nav>
     </aside>
 
-    <main class="content">
+    <div class="main">
       <header class="topbar">
-        <h1>Dashboard</h1>
-        <div class="right">
-          <span>🔔</span> 
-          <div class="profile">👤 User ▼</div>
-        </div>
+        <h2>Dashboard</h2>
+        <a href="add-customer.html" class="btn-primary">+ New Customer</a>
       </header>
 
-      <section class="grid">
-        <div class="kpi">
-          <h3>Total Customers</h3>
-          <p>1,240</p>
+      <div class="content">
+        <div class="grid">
+          <div class="kpi"><h3>Total Customers</h3><p>1,248</p></div>
+          <div class="kpi"><h3>New This Month</h3><p>89</p></div>
+          <div class="kpi"><h3>Won Deals</h3><p>34</p></div>
+          <div class="kpi"><h3>Conversion Rate</h3><p>27%</p></div>
         </div>
-        <div class="kpi">
-          <h3>Active Leads</h3>
-          <p>312</p>
-        </div>
-        <div class="kpi">
-          <h3>Employees</h3>
-          <p>48</p>
-        </div>
-        <div class="kpi">
-          <h3>Pending Tasks</h3>
-          <p>19</p>
-        </div>
-      </section>
 
-      <div class="card"><h3>Revenue Chart (UI Only)</h3><div class="chart-placeholder">Chart Placeholder</div></div>
-      <div class="card" style="margin-top:16px;"><h3>Recent Activity</h3><p>Lead Ahmed added - 2h ago</p><p>Task completed by Sara - 5h ago</p></div>
-    </main>
+        <div class="card">
+          <h3>Customer Database</h3>
+          <div class="toolbar">
+            <input type="text" placeholder="Search customers...">
+            <select><option>All Status</option><option>New</option><option>Contacted</option><option>Won</option></select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>NAME</th><th>EMAIL</th><th>COMPANY</th><th>STATUS</th><th>ACTION</th></tr></thead>
+              <tbody>
+                <tr><td>Ali Khan</td><td>ali@mail.com</td><td>TechSoft</td><td><span class="badge new">New</span></td><td><button class="btn-icon">View</button></td></tr>
+                <tr><td>Sara Ahmed</td><td>sara@mail.com</td><td>SoftGrid</td><td><span class="badge contacted">Contacted</span></td><td><button class="btn-icon">View</button></td></tr>
+                <tr><td>Usman Raza</td><td>usman@mail.com</td><td>Innova</td><td><span class="badge won">Won</span></td><td><button class="btn-icon">View</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination"><button>Prev</button><button class="active">1</button><button>2</button><button>Next</button></div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
