@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Customers</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar"><div class="brand">CRM</div><nav class="nav"><a href="dashboard.html">Dashboard</a><a href="customers.html" class="active">Customers</a><a href="leads.html">Leads</a><a href="#">Employees</a><a href="#">Tasks</a><a href="index.html">Logout</a></nav></aside>
+<main class="content">
+<header class="topbar"><h1>Customer List</h1><div class="right"><span>🔔</span><div class="profile">👤 User ▼</div></div></header>
+<div class="toolbar"><div class="left"><input type="text" placeholder="Search customers..."></div><a href="add-customer.html" class="btn" style="width:auto; padding:10px 16px;">+ Add Customer</a></div>
+<div class="table-wrap">
+<table class="table"><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Status</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>Ahmed Khan</td><td>ahmed@mail.com</td><td>0300-123456</td><td><span class="badge active">Active</span></td><td class="actions"><a href="customer-profile.html" class="btn-sm primary">View</a><button class="btn-sm">Edit</button></td></tr>
+<tr><td>Sara Ali</td><td>sara@mail.com</td><td>0311-987654</td><td><span class="badge new">New</span></td><td class="actions"><a href="customer-profile.html" class="btn-sm primary">View</a><button class="btn-sm">Edit</button></td></tr>
+</tbody></table>
+<div class="pagination"><button class="btn-sm">Prev</button><button class="btn-sm">1</button><button class="btn-sm">Next</button></div>
+</div></main></div></body></html>
