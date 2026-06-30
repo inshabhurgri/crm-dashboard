@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customers</title>
+  <title>Customers - CRM</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <div class="brand">SoftGrid CRM</div>
+      <div class="brand">CRM</div>
       <nav class="nav">
-        <a href="customers.html" class="active">Customer List</a>
-        <a href="add-customer.html">Add Customer</a>
-        <a href="customer-profile.html">Customer Profile</a>
-        <a href="leads.html">Lead Management</a>
-        <a href="add-lead.html">Add Lead</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="customers.html" class="active">Customers</a>
+        <a href="leads.html">Leads</a>
+        <a href="employees.html">Employees</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="index.html">Logout</a>
       </nav>
     </aside>
 
     <main class="content">
       <header class="topbar">
         <h1>Customers</h1>
-        <a href="add-customer.html" class="btn">+ New Customer</a>
+        <div class="topbar-right">
+          <a href="add-customer.html" class="btn">+ New Customer</a>
+        </div>
       </header>
 
       <section class="grid">
@@ -42,9 +45,9 @@
           <table class="table">
             <thead><tr><th>NAME</th><th>EMAIL</th><th>COMPANY</th><th>STATUS</th><th>ACTION</th></tr></thead>
             <tbody>
-              <tr><td>Ali Khan</td><td>ali@mail.com</td><td>TechSoft</td><td><span class="badge new">New</span></td><td><a href="customer-profile.html" class="btn-sm">View</a></td></tr>
-              <tr><td>Sara Ahmed</td><td>sara@mail.com</td><td>SoftGrid</td><td><span class="badge contacted">Contacted</span></td><td><a href="customer-profile.html" class="btn-sm">View</a></td></tr>
-              <tr><td>Usman Raza</td><td>usman@mail.com</td><td>Innova</td><td><span class="badge won">Won</span></td><td><a href="customer-profile.html" class="btn-sm">View</a></td></tr>
+              <tr><td>Ali Khan</td><td>ali@mail.com</td><td>TechSoft</td><td><span class="badge new">New</span></td><td><a href="#" class="btn-sm">View</a></td></tr>
+              <tr><td>Sara Ahmed</td><td>sara@mail.com</td><td>SoftGrid</td><td><span class="badge contacted">Contacted</span></td><td><a href="#" class="btn-sm">View</a></td></tr>
+              <tr><td>Usman Raza</td><td>usman@mail.com</td><td>Innova</td><td><span class="badge won">Won</span></td><td><a href="#" class="btn-sm">View</a></td></tr>
             </tbody>
           </table>
           <div class="pagination"><button class="btn-sm">Prev</button><button class="btn-sm active">1</button><button class="btn-sm">2</button><button class="btn-sm">Next</button></div>
