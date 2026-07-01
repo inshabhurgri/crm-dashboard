@@ -1,54 +1,131 @@
 :root{
-  --bg:#0f172a; --sidebar:#0b1220; --card:#1e293b; --muted:#94a3b8; 
-  --text:#e2e8f0; --accent:#2563eb; --yellow:#facc15; --green:#22c55e; --blue:#3b82f6;
-  --border:#334155;
+  --bg:#0f1115;
+  --card:#161a22;
+  --muted:#9aa3b2;
+  --text:#e6e9ef;
+  --accent:#5b8def;
+  --accent-2:#22c55e;
+  --danger:#ef4444;
+  --border:#1f2430;
+  --chip:#0b1020;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}
 
-/* ========== LAYOUT RAMEEN WALA ========== */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+
+/* ====== LAYOUT ====== */
 .dashboard{display:flex;min-height:100vh}
-.sidebar{width:240px;background:var(--sidebar);padding:16px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:16px}
-.logo{font-weight:800;font-size:16px;color:var(--muted);margin-bottom:8px}
-.sidebar nav{display:flex;flex-direction:column;gap:4px;flex:1}
-.sidebar nav a{color:var(--muted);padding:10px 12px;border-radius:8px;font-size:14px}
-.sidebar nav a.active,.sidebar nav a:hover{background:var(--card);color:var(--text)}
-.main{flex:1;padding:24px;overflow-y:auto}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.topbar h2{font-size:22px}
-.content{margin-top:16px}
+.sidebar{
+  width:240px;
+  background:var(--card);
+  border-right:1px solid var(--border);
+  padding:16px 12px;
+  position:sticky;top:0;align-self:flex-start;height:100vh
+}
+.logo{font-weight:700;font-size:18px;margin:8px 12px 16px;color:var(--text)}
+.sidebar nav{display:flex;flex-direction:column;gap:6px}
+.sidebar nav a{
+  padding:10px 12px;border-radius:8px;color:var(--muted);font-weight:500
+}
+.sidebar nav a:hover{background:#0f1420;color:var(--text)}
+.sidebar nav a.active{background:var(--accent);color:#0b1020}
 
-/* ========== COMPONENTS ========== */
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
-.kpi,.card{background:var(--card);padding:16px;border-radius:12px}
-.kpi h3{color:var(--muted);font-size:13px;font-weight:500}
-.kpi p{margin-top:8px;font-size:28px;font-weight:700}
-.card h3{margin:0 0 20px;font-size:18px}
-.toolbar{display:flex;gap:12px;margin-bottom:16px}
-.toolbar input,.toolbar select{padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#0b1220;color:var(--text);font-size:14px}
-.table-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:14px}
-table th{text-align:left;padding:12px;color:var(--muted);font-weight:600;font-size:12px;background:var(--sidebar)}
-table td{text-align:left;padding:12px;border-top:1px solid var(--border)}
-.badge{padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;display:inline-block}
-.badge.new{background:rgba(59,130,246,.15);color:var(--blue)}
-.badge.contacted{background:rgba(250,204,21,.15);color:var(--yellow)}
-.badge.won{background:rgba(34,197,94,.15);color:var(--green)}
-.btn{padding:10px 16px;border:none;border-radius:8px;background:white;color:#0f172a;font-weight:600;cursor:pointer;font-size:14px;display:inline-block}
-.btn-primary{padding:10px 16px;border:none;border-radius:8px;background:var(--accent);color:white;font-weight:600;cursor:pointer;text-decoration:none;font-size:14px;display:inline-block}
-.btn-icon{padding:6px 12px;font-size:12px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer}
-.field{margin-bottom:16px}
-.field label{display:block;margin-bottom:6px;font-size:14px;color:var(--muted)}
-.field input,.field select{width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:#0b1220; color:var(--text);}
-.pagination{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
-.pagination button{padding:6px 12px;font-size:12px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer}
-.pagination button.active{background:var(--accent);border-color:var(--accent)}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;border-bottom:1px solid var(--border);background:var(--bg);
+  position:sticky;top:0;z-index:10
+}
+.topbar h2{margin:0;font-size:20px}
+.content{padding:18px}
 
-/* ========== LOGIN ONLY ========== */
-.login-wrap{display:grid;place-items:center;min-height:100vh;padding:24px}
-.login-card{width:100%;max-width:380px;background:var(--card);padding:24px;border-radius:12px}
-.login-card h1{margin-bottom:16px;text-align:center}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px
+}
 
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.sidebar{display:none}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.toolbar{flex-direction:column}}
+/* ====== BUTTONS ====== */
+.btn-primary{
+  background:var(--accent);color:#0b1020;border:0;border-radius:10px;
+  padding:10px 14px;font-weight:600;cursor:pointer
+}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn-ghost{
+  padding:8px 14px;border:1px solid var(--border);border-radius:8px;
+  color:var(--text);text-decoration:none;font-size:13px;background:transparent;cursor:pointer
+}
+.btn-icon{
+  display:inline-block;padding:6px 12px;background:var(--accent);color:#0b1020;
+  border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;cursor:pointer
+}
+.btn{padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer}
+.btn.ghost{background:transparent}
+
+/* ====== TABLES & FORMS ====== */
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:680px}
+thead th{
+  text-align:left;font-size:12px;color:var(--muted);
+  padding:12px;border-bottom:1px solid var(--border);background:#0f1420
+}
+tbody td{padding:12px;border-bottom:1px solid var(--border);font-size:14px}
+tbody tr:hover{background:#0f1420}
+
+.form{display:grid;gap:12px;max-width:520px}
+.form input,.form select,.form textarea{
+  width:100%;padding:10px 12px;border-radius:10px;
+  border:1px solid var(--border);background:#0f1420;color:var(--text);outline:none
+}
+.form textarea{min-height:100px;resize:vertical}
+
+/* ====== BADGES ====== */
+.badge{
+  display:inline-block;padding:4px 8px;border-radius:999px;
+  font-size:12px;font-weight:600;border:1px solid var(--border)
+}
+.badge.new{background:#1f2a44;color:#bfdbfe}
+.badge.won{background:#064e3b;color:#a7f3d0}
+.badge.lost{background:#7f1d1d;color:#fecaca}
+.badge.inprogress{background:#1e3a8a;color:#bfdbfe}
+.badge.done{background:#064e3b;color:#a7f3d0}
+
+/* ====== PRIORITY ====== */
+.priority{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;border:1px solid var(--border)}
+.priority.high{background:#7f1d1d;color:#fecaca}
+.priority.low{background:#064e3b;color:#a7f3d0}
+
+/* ====== GRID CARDS ====== */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.emp-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:16px;text-align:center
+}
+.emp-card img{width:64px;height:64px;border-radius:50%;margin-bottom:8px;border:1px solid var(--border)}
+
+.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.task-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+.task-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.task-head h4{margin:0;font-size:16px}
+
+.progress{height:8px;background:#1f2937;border-radius:999px;overflow:hidden;margin:8px 0}
+.progress>span{display:block;height:100%;background:var(--accent);border-radius:999px}
+
+/* ====== MODAL ====== */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.active{display:flex}
+.modal-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;width:min(520px,100%)}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px){
+  .sidebar{display:none}
+  .dashboard{flex-direction:column}
