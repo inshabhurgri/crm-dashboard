@@ -1,60 +1,39 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tasks - SoftGrid CRM</title>
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=11">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head><body>
 <div class="dashboard">
   <aside class="sidebar">
-    <div class="logo">SoftGrid CRM</div>
+    <div class="logo">CRM</div>
     <nav>
-      <a href="dashboard.html">Customer List</a>
-      <a href="employees.html">Employee List</a>
-      <a href="tasks.html" class="active">Task List</a>
-      <a href="create-task.html">Create Task</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="customers.html">Customers</a>
+      <a href="leads.html">Leads</a>
+      <a href="employees.html">Employees</a>
+      <a href="tasks.html" class="active">Tasks</a>
       <a href="index.html">Logout</a>
     </nav>
   </aside>
   <div class="main">
-    <header class="topbar">
-      <h2>Tasks</h2>
-      <a href="create-task.html" class="btn-primary">+ Create Task</a>
-    </header>
+    <header class="topbar"><h2>Tasks</h2><a href="create-task.html" class="btn-primary">+ Create Task</a></header>
     <div class="content">
-      <div class="toolbar">
-        <input type="text" placeholder="Search tasks...">
-        <select><option>All Status</option><option>In Progress</option><option>Done</option><option>To Do</option></select>
-      </div>
-
       <div class="task-grid">
         <div class="task-card">
-          <div class="task-head">
-            <h4>Follow up with TechSoft</h4>
-            <span class="priority high">HIGH</span>
-          </div>
-          <p style="color:var(--muted);font-size:13px;margin:8px 0">Call Ali Khan and confirm deal closure for Q4.</p>
+          <div class="task-head"><h4>Follow up with TechSoft</h4><span class="priority high">HIGH</span></div>
+          <p style="color:var(--muted);font-size:13px">Assignee: Ali Khan | Due: Oct 12</p>
           <div class="progress"><span style="width:60%"></span></div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
-            <span class="badge inprogress">In Progress</span>
-            <span style="color:var(--muted);font-size:12px">Due: Oct 12</span>
-          </div>
+          <span class="badge inprogress">In Progress</span>
         </div>
-
         <div class="task-card">
-          <div class="task-head">
-            <h4>Update CRM Docs</h4>
-            <span class="priority low">LOW</span>
-          </div>
-          <p style="color:var(--muted);font-size:13px;margin:8px 0">Add new employee onboarding SOP to wiki.</p>
+          <div class="task-head"><h4>Update CRM Docs</h4><span class="priority low">LOW</span></div>
+          <p style="color:var(--muted);font-size:13px">Assignee: Sara Ahmed | Due: Oct 15</p>
           <div class="progress"><span style="width:100%"></span></div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
-            <span class="badge done">Done</span>
-            <span style="color:var(--muted);font-size:12px">Completed</span>
-          </div>
+          <span class="badge done">Done</span>
         </div>
       </div>
     </div>
   </div>
 </div>
 </body></html>
-         
