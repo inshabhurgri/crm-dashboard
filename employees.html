@@ -1,34 +1,48 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Employees - SoftGrid CRM</title>
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=13">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head><body>
 <div class="dashboard">
   <aside class="sidebar">
-    <div class="logo">CRM</div>
+    <div class="logo">SoftGrid CRM</div>
     <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="customers.html">Customers</a>
-      <a href="leads.html">Leads</a>
-      <a href="employees.html" class="active">Employees</a>
-      <a href="tasks.html">Tasks</a>
+      <a href="customers.html">Customer List</a>
+      <a href="leads.html">Lead Management</a>
+      <a href="employees.html" class="active">Employee List</a>
+      <a href="tasks.html">Task List</a>
       <a href="index.html">Logout</a>
     </nav>
   </aside>
   <div class="main">
-    <header class="topbar"><h2>Employees</h2></header>
+    <header class="topbar">
+      <h2>Employees</h2>
+      <button class="btn-primary">+ Add Employee</button>
+    </header>
     <div class="content">
+      <div class="grid-4" style="margin-bottom:16px">
+        <div class="card"><p style="color:var(--muted);margin:0;font-size:13px">Total Employees</p><h2 style="margin:8px 0 0">48</h2></div>
+        <div class="card"><p style="color:var(--muted);margin:0;font-size:13px">Active Now</p><h2 style="margin:8px 0 0">36</h2></div>
+        <div class="card"><p style="color:var(--muted);margin:0;font-size:13px">On Leave</p><h2 style="margin:8px 0 0">3</h2></div>
+        <div class="card"><p style="color:var(--muted);margin:0;font-size:13px">New Hires</p><h2 style="margin:8px 0 0">2</h2></div>
+      </div>
+      
       <div class="grid-3">
         <div class="emp-card">
-          <img src="https://i.pravatar.cc/64?u=ali" alt="emp">
-          <h4>Ali Khan</h4><p>Sales Manager</p><span class="badge won">Active</span>
-          <br><a href="employee-profile.html?id=1" class="btn-icon">View</a>
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="emp">
+          <h4>Sara Ahmed</h4><p style="color:var(--muted);margin:4px 0">Sales Manager</p>
+          <span class="badge won">Active</span>
         </div>
         <div class="emp-card">
-          <img src="https://i.pravatar.cc/64?u=sara" alt="emp">
-          <h4>Sara Ahmed</h4><p>Lead Executive</p><span class="badge new">On Leave</span>
-          <br><a href="employee-profile.html?id=2" class="btn-icon">View</a>
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="emp">
+          <h4>Usman Raza</h4><p style="color:var(--muted);margin:4px 0">Developer</p>
+          <span class="badge won">Active</span>
+        </div>
+        <div class="emp-card">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="emp">
+          <h4>Ali Khan</h4><p style="color:var(--muted);margin:4px 0">Support</p>
+          <span class="badge new">On Leave</span>
         </div>
       </div>
     </div>
