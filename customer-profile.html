@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Customer Profile</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="layout">
-<aside class="sidebar"><div class="brand">CRM</div><nav class="nav"><a href="dashboard.html">Dashboard</a><a href="customers.html" class="active">Customers</a><a href="leads.html">Leads</a><a href="#">Employees</a><a href="#">Tasks</a><a href="index.html">Logout</a></nav></aside>
-<main class="content">
-<header class="topbar"><h1>Customer Profile</h1><div class="right"><span>🔔</span><div class="profile">👤 User ▼</div></div></header>
-<div class="profile-grid">
-<div class="profile-card"><h3>Ahmed Khan</h3><p><b>Email:</b> ahmed@mail.com</p><p><b>Phone:</b> 0300-123456</p><p><b>Status:</b> <span class="badge active">Active</span></p><a href="customers.html" class="btn-sm">← Back</a></div>
-<div class="profile-card"><h3>Activity Log</h3><p>Lead converted - 3 days ago</p><p>Last contact - 1 day ago</p></div>
-</div></main></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Profile - SoftGrid CRM</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="logo">SoftGrid CRM</div>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="customers.html" class="active">Customers</a>
+        <a href="leads.html">Leads</a>
+        <a href="employees.html">Employees</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="index.html">Logout</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h2>Customer Profile</h2>
+        <a href="customers.html" class="btn-ghost">← Back</a>
+      </header>
+
+      <div class="content">
+        <div class="card" style="max-width:600px">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+            <img src="https://i.pravatar.cc/80?u=ahmed" alt="Customer" style="width:80px;height:80px;border-radius:50%;border:2px solid var(--border)">
+            <div>
+              <h3 style="margin:0 0 4px 0">Ahmed Khan</h3>
+              <span class="badge won">Active</span>
+            </div>
+          </div>
+          
+          <div style="display:grid;gap:8px;margin-bottom:16px">
+            <p style="margin:0"><b>Email:</b> ahmed@mail.com</p>
+            <p style="margin:0"><b>Phone:</b> 0300-123456</p>
+            <p style="margin:0"><b>Company:</b> Khan Pvt Ltd</p>
+          </div>
+
+          <div class="card" style="margin-top:0">
+            <h3>Activity Log</h3>
+            <div style="display:grid;gap:8px;color:var(--muted);font-size:14px">
+              <p style="margin:0">• Lead converted - 3 days ago</p>
+              <p style="margin:0">• Last contact - 1 day ago</p>
+              <p style="margin:0">• Proposal sent - Today</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
