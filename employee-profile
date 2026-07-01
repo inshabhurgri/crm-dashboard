@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Profile - SoftGrid CRM</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="logo">SoftGrid CRM</div>
+    <nav>
+      <a href="dashboard.html">Customer List</a>
+      <a href="leads.html">Lead Management</a>
+      <a href="employees.html">Employees</a>
+      <a href="tasks.html">Tasks</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar"><h2>Employee Profile</h2></header>
+    <div class="content">
+      <div class="card" style="max-width:500px;text-align:center">
+        <img src="https://i.pravatar.cc/120?u=1" alt="emp" style="width:120px;height:120px;border-radius:50%;margin-bottom:12px">
+        <h3>Ali Khan</h3>
+        <p style="color:var(--muted)">Sales Manager</p>
+        <span class="badge contacted">Active</span>
+        <div style="margin-top:16px;text-align:left">
+          <p><b>Email:</b> ali@softgrid.com</p>
+          <p><b>Tasks Completed:</b> 24</p>
+          <p><b>Tasks In Progress:</b> 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
