@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Task - SoftGrid CRM</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="logo">SoftGrid CRM</div>
+    <nav>
+      <a href="dashboard.html">Customer List</a>
+      <a href="leads.html">Lead Management</a>
+      <a href="employees.html">Employees</a>
+      <a href="tasks.html">Tasks</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar"><h2>Create Task</h2></header>
+    <div class="content">
+      <div class="card" style="max-width:600px">
+        <form class="form">
+          <input placeholder="Task Title" required>
+          <textarea rows="3" placeholder="Description"></textarea>
+          <select required><option value="">Assign to Employee</option><option>Ali Khan</option><option>Sara Ahmed</option><option>Usman Raza</option></select>
+          <input type="date" required>
+          <select required><option value="">Priority</option><option>High</option><option>Medium</option><option>Low</option></select>
+          <button class="btn" type="submit">Create Task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
