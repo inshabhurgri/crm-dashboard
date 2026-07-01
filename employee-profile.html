@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Profile - SoftGrid CRM</title>
+<link rel="stylesheet" href="style.css?v=8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="logo">SoftGrid CRM</div>
+    <nav>
+      <a href="dashboard.html">Customer List</a>
+      <a href="employees.html" class="active">Employee List</a>
+      <a href="tasks.html">Task List</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <h2>Employee Profile</h2>
+      <a href="employees.html" class="btn-ghost">← Back</a>
+    </header>
+    <div class="content" id="profile-content"></div>
+  </div>
+</div>
+
+<script>
+const employees = {
+ 1: {name: "Ali Khan", role: "Sales Manager", status: "Active", statusClass: "won", email: "ali@softgrid.com", phone: "0301-1112223", tasksDone: 24, tasksProgress: 3, img: "https://i.pravatar.cc/120?u=ali"},
+ 2: {name: "Sara Ahmed", role: "Lead Executive", status: "On Leave", statusClass: "new", email: "sara@softgrid.com", phone: "0302-4445556", tasksDone: 18, tasksProgress: 5, img: "https://i.pravatar.cc/120?u=sara"}
+};
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || '1';
+const emp = employees[id];
+document.getElementById('profile-content').innerHTML = `
+  <div class="card" style="max-width:500px;text-align:center">
+    <img src="${emp.img}" alt="emp" style="width:120px;height:120px;border-radius:50%;margin-bottom:12px;border:2px solid var(--border)">
+    <h3>${emp.name}</h3><p style="color:var(--muted)">${emp.role}</p>
+    <span class="badge ${emp.statusClass}">${emp.status}</span>
+    <div style="margin-top:16px;text-align:left">
+      <p style="margin:6px 0"><b>Email:</b> ${emp.email}</p>
+      <p style="margin:6px 0"><b>Phone:</b> ${emp.phone}</p>
+      <p style="margin:6px 0"><b>Tasks Completed:</b> ${emp.tasksDone}</p>
+      <p style="margin:6px 0"><b>Tasks In Progress:</b> ${emp.tasksProgress}</p>
+    </div>
+  </div>`;
+</script>
+</body></html>
