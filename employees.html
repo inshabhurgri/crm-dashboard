@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employees - SoftGrid CRM</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="logo">SoftGrid CRM</div>
+    <nav>
+      <a href="dashboard.html">Customer List</a>
+      <a href="leads.html">Lead Management</a>
+      <a href="employees.html" class="active">Employees</a>
+      <a href="tasks.html">Tasks</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar"><h2>Employees</h2><button class="btn-primary" onclick="openModal()">+ Add Employee</button></header>
+    <div class="content">
+      <div class="grid-3">
+        <div class="emp-card">
+          <img src="https://i.pravatar.cc/64?u=1" alt="emp">
+          <h4>Ali Khan</h4><p>Sales Manager</p><span class="badge contacted">Active</span>
+          <br><a href="employee-profile.html" class="btn-icon" style="margin-top:8px;display:inline-block">View</a>
+        </div>
+        <div class="emp-card">
+          <img src="https://i.pravatar.cc/64?u=2" alt="emp">
+          <h4>Sara Ahmed</h4><p>Lead Exec</p><span class="badge new">On Leave</span>
+          <br><a href="employee-profile.html" class="btn-icon" style="margin-top:8px;display:inline-block">View</a>
+        </div>
+        <div class="emp-card">
+          <img src="https://i.pravatar.cc/64?u=3" alt="emp">
+          <h4>Usman Raza</h4><p>Developer</p><span class="badge won">Active</span>
+          <br><a href="employee-profile.html" class="btn-icon" style="margin-top:8px;display:inline-block">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal" id="empModal"><div class="modal-card">
+  <h3>Add Employee</h3>
+  <form class="form">
+    <input placeholder="Full Name" required>
+    <input placeholder="Role" required>
+    <select><option>Active</option><option>On Leave</option></select>
+    <div style="display:flex;gap:8px"><button class="btn" type="submit">Save</button><button class="btn ghost" type="button" onclick="closeModal()">Cancel</button></div>
+  </form>
+</div></div>
+<script>
+function openModal(){document.getElementById('empModal').classList.add('active')}
+function closeModal(){document.getElementById('empModal').classList.remove('active')}
+</script>
+</body></html>
